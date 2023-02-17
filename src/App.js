@@ -1,4 +1,3 @@
-import './App.css';
 import { UserCard } from './modules/UserCard';
 import { UserSearch } from './modules/UserSearch';
 import '@fortawesome/fontawesome-free/css/all.min.css';

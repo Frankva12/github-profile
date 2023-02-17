@@ -23,6 +23,7 @@ const UserSearch = () => {
 return (
   <div class="row">
     <Container className="col-md-8">
+    <h1 className="m-4" style={{ fontWeight: 'bold' }}> GET GITHUB PROFILE</h1>
       <MDBCol>
         <MDBInput hint="Github Profile" type="text"/>
         <Button className="col-md-6" variant="success">Search Github Profile</Button>
