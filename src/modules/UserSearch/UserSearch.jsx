@@ -9,22 +9,11 @@ import { useUser } from "../../hooks";
 const UserSearch = () => {
   const { fetchUser } = useUser();
 
-  // if (isLoading) {
-  //   return <div> Is Loading!!</div>;
-  // }
-
-//   {
-//     users.map((user) => <User
-//       key={user.id}
-//       id={user.id}
-//       name={user.name}
-//       onUserClick={fetchUser}
-//     />)
-//   }
-
 const [value, setValue] = useState("");
+
 const handleSubmit = e => {
   e.preventDefault();
+  console.log(value);
   if (!value) return;
   setValue("");
 };
@@ -36,8 +25,8 @@ return (
       <Container className="col-md-8">
       <h1 className="m-4" style={{ fontWeight: 'bold' }}> GET GITHUB PROFILE</h1>
         <MDBCol>
-          <MDBInput hint="Github Profile" type="text"/>
-          <Button className="col-md-6" variant="success" type="submit" onClick={fetchUser}>
+          <MDBInput onChange={(e)=>setValue(e.target.value)} value={value} hint="Github Profile" type="text"/>
+          <Button className="col-md-6" variant="success" type="submit" onClick={() => fetchUser(value)}>
             Search Github Profile</Button>
         </MDBCol>
       </Container>

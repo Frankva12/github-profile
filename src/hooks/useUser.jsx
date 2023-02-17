@@ -4,9 +4,10 @@ const useUser = () => {
   const [users, setUser] = useState([]);
 //   const [isLoading, setIsLoading] = useState(true);
   
-    const fetchUser = async () => {
-      const res = await fetch(`https://api.github.com/users/frankva12`);
+    const fetchUser = async (name) => {
+      const res = await fetch(`https://api.github.com/users/${name}`);
       const data = await res.json();
+      console.log(name);
       setUser(data);
       console.log(data);
     //   setIsLoading(false);

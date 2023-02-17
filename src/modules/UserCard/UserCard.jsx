@@ -6,7 +6,6 @@ import { useUser } from '../../hooks';
 
 const UsersList = () => {
   const { users } = useUser();
-
     const imgURL = users.avatar_url;
   return (
         <Container className="mx-auto p-5">
