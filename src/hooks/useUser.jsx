@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useUsers = (props) => {
+const useUser = () => {
   const [users, setUser] = useState([]);
 //   const [isLoading, setIsLoading] = useState(true);
   
@@ -8,6 +8,7 @@ const useUsers = (props) => {
       const res = await fetch(`https://api.github.com/users/frankva12`);
       const data = await res.json();
       setUser(data);
+      console.log(data);
     //   setIsLoading(false);
     };
 
@@ -18,4 +19,4 @@ const useUsers = (props) => {
   };
 };
 
-export default useUsers;
+export default useUser;
