@@ -1,18 +1,19 @@
 import { useState } from "react";
 
 const useUser = () => {
-  const [users, setUser] = useState([]);
+  const [users, setUser] = useState('');
 //   const [isLoading, setIsLoading] = useState(true);
   
-    const fetchUser = async (name) => {
-      const res = await fetch(`https://api.github.com/users/${name}`);
-      const data = await res.json();
+const fetchUser = async (name) => {
+      const URL = 'https://api.github.com/users/';
       console.log(name);
+      
+      const res = await fetch(`${URL}${name}`);
+      const data = await res.json();
       setUser(data);
-      console.log(data);
-    //   setIsLoading(false);
     };
 
+    console.log(users);
   return {
     fetchUser,
     users,

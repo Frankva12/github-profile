@@ -9,11 +9,10 @@ import { useUser } from "../../hooks";
 const UserSearch = () => {
   const { fetchUser } = useUser();
 
-const [value, setValue] = useState("");
+  const [value, setValue] = useState("");
 
 const handleSubmit = e => {
   e.preventDefault();
-  console.log(value);
   if (!value) return;
   setValue("");
 };
