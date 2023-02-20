@@ -9,7 +9,7 @@ const UserCard = ({data, isLoading}) => {
     if (!isLoading) {
         return (
         <Container className="mx-auto p-5 col">
-        <Card className='mx-auto' style={{ width: '21rem' }}>
+        <Card className='mx-auto' style={{ width: '18rem' }}>
             <Card.Img  src={githubLogo}/>
                 <Card.Body>
                     <Card.Title>Github Request</Card.Title>
@@ -24,7 +24,7 @@ const UserCard = ({data, isLoading}) => {
     
   return (
         <Container className="mx-auto p-5 col">
-            <Card className='mx-auto' style={{ width: '21rem' }}>
+            <Card className='mx-auto' style={{ width: '18rem' }}>
                 <Card.Img  src={data.avatar_url}/>
                 <Card.Body>
                     <Card.Title>{data.name}</Card.Title>
