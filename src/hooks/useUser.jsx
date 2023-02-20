@@ -10,8 +10,14 @@ const fetchUser = async (name) => {
       try {
         const res = await fetch(`${URL}${name}`);
         const data = await res.json();
-        setUser(data);
-        setIsLoading(true);
+        if (res?.ok) {
+          setUser(data);
+          setIsLoading(true);
+        } else {
+          alert('The name that you enter is not in github')
+          setIsLoading(false);
+          console.log(`HTTP Response Code: ${res?.status}`)
+        }
       } catch {
         setIsLoading(false)
       }

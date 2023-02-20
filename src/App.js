@@ -5,7 +5,7 @@ import { UserSearch } from './modules/UserSearch';
 function App() {
   const {fetchUser, users, isLoading} = useUser()
   return (
-    <div className="text-center">
+    <div className="main text-center">
        <UserSearch onSubmit={fetchUser}/>
        <UserCard data={users} isLoading={isLoading}/>
     </div>
